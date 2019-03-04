@@ -21,9 +21,6 @@ let StudentSchema = new schema({
         type : Boolean,
         required:false
     },
-    student_time:{
-        type:Date
-    }
 });
 
 
