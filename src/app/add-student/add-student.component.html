@@ -17,6 +17,10 @@
       <label for="studentAdress">Student Adress</label>
       <input type="text" class="form-control" id="studentAdress" name="studentAdress" [(ngModel)] = "formData.studentAdress"  placeholder="Student Adress">
     </div>
+    <div class="form-group">
+      <label for="studentInstitute">Student Institute</label>
+      <input type="text" class="form-control" id="studentInstitute" name="studentInstitute" [(ngModel)] = "formData.studentInstitute"  placeholder="Student Institute">
+    </div>
 
     <button type="submit" class="btn btn-primary" (click)="addStudent()">Add Student</button>
   </form>

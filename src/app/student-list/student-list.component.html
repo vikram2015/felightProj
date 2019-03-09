@@ -12,6 +12,7 @@
         <th scope="col">Student Batch</th>
         <th scope="col">Student Course</th>
         <th scope="col">Student Adress</th>
+        <th scope="col">Student Institute</th>
         <th scope="col">View Student</th>
         <th scope="col">Update Student</th>
         <th scope="col">Delete Student</th>
@@ -24,6 +25,7 @@
         <td>{{student.student_batch}}</td>
         <td>{{student.student_course}}</td>
         <td>{{student.student_adress}}</td>
+        <td>{{student.student_institute}}</td>
         <td style="text-align: center"><button type="submit" style="width: 100px;" class="btn btn-primary" (click)="viewStudent(student)">View</button></td>
         <td style="text-align: center"><button type="submit" class="btn btn-success" (click)="updateStudent(student)">Update</button></td>
         <td style="text-align: center"><button type="submit" style="width: 100px;" class="btn btn-danger" (click)="deleteStudent()">Delete</button></td>

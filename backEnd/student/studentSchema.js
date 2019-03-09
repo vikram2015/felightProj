@@ -17,6 +17,14 @@ let StudentSchema = new schema({
         type : String,
         required : true
     },
+    student_institute : {
+        type : String,
+        required : true
+    },
+    student_fee : {
+        type : Number,
+        required : true
+    },
     isTrue : {
         type : Boolean,
         required:false

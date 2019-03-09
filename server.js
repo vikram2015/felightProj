@@ -22,7 +22,7 @@ app.use(express.static(path.join(__dirname, 'dist')));
 
 //This is for redirecting the request to particular routes
 app.use('/student',studentRoute);
-// app.use('/institute',instituteRoute);
+app.use('/institute',instituteRoute);
 
 
 

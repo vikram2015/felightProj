@@ -20,6 +20,11 @@ import { StudentService } from './student.service';
 import { StudentListComponent } from './student-list/student-list.component';
 import { UpdateStudentComponent } from './update-student/update-student.component';
 import { ViewStudentComponent } from './view-student/view-student.component';
+import { InstituteListComponent } from './institute-list/institute-list.component';
+import { AddInstituteComponent } from './add-institute/add-institute.component';
+import { ViewInstituteComponent } from './view-institute/view-institute.component';
+import { UpdateInstituteComponent } from './update-institute/update-institute.component';
+import { InstituteServiceService } from './institute-service.service';
 
 
 @NgModule({
@@ -28,7 +33,11 @@ import { ViewStudentComponent } from './view-student/view-student.component';
     AddStudentComponent,
     StudentListComponent,
     UpdateStudentComponent,
-    ViewStudentComponent
+    ViewStudentComponent,
+    InstituteListComponent,
+    AddInstituteComponent,
+    ViewInstituteComponent,
+    UpdateInstituteComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +46,7 @@ import { ViewStudentComponent } from './view-student/view-student.component';
     HttpClientModule,
     HttpModule
   ],
-  providers: [ StudentService ],
+  providers: [ StudentService, InstituteServiceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

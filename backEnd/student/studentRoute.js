@@ -22,7 +22,9 @@ router.post('/saveStudent', (req, res) => {
         student_name: req.body.studentName,
         student_batch: req.body.studentBatch,
         student_course: req.body.studentCourse,
+        student_fee: req.body.studentFee,
         student_adress: req.body.studentAdress,
+        student_institute: req.body.studentInstitute,
         isTrue: true
     }
     StudentOperation.saveTheStudent(studentData).then(function (savedData) {
@@ -54,5 +56,21 @@ router.post('/updateStudent', function(req, res){
         }
     })
 })
+
+router.get('/aggregateStudent', function (req, res) {
+    let studentAdress = req.query.studentAdress;
+    // var query = {company_id:121};
+    let query = { student_adress: studentAdress };
+    console.log('query')
+    console.log(query)
+    StudentOperation.fetchAggregatedDetails(query)
+        .then((StudentData) => {
+            res.send({
+                success: true,
+                MSG: 'Student Details found',
+                StudentData: StudentData
+            })
+        })
+});
 
 module.exports = router;

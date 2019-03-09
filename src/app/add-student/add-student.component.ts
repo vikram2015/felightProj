@@ -20,8 +20,6 @@ export class AddStudentComponent implements OnInit {
 
   constructor(private studentService : StudentService, private router:Router) { }
 
-
-
   //This is for adding the new student
   addStudent(){
     console.log(this.formData);

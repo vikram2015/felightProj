@@ -1,0 +1,35 @@
+<div class="container">
+
+  <div>
+    <h1>Institute List Page</h1>
+    <button type="submit" style="float:right;" class="btn btn-primary" (click)="addInstitute()">Add Institute</button>
+  </div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">S.no.</th>
+        <th scope="col">Institute Name</th>
+        <th scope="col">Institute Batch</th>
+        <th scope="col">Institute Course</th>
+        <th scope="col">Institute Adress</th>
+        <th scope="col">Student Name</th>
+        <th scope="col">View institute</th>
+        <th scope="col">Update institute</th>
+        <th scope="col">Delete institute</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let institute of instituteList;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{institute.institute_name}}</td>
+        <td>{{institute.institute_batch}}</td>
+        <td>{{institute.institute_course}}</td>
+        <td>{{institute.institute_adress}}</td>
+        <td>{{institute.student_name.student_name}}</td>
+        <td style="text-align: center"><button type="submit" style="width: 100px;" class="btn btn-primary" (click)="viewInstitute(institute)">View</button></td>
+        <td style="text-align: center"><button type="submit" class="btn btn-success" (click)="updateInstitute(institute)">Update</button></td>
+        <td style="text-align: center"><button type="submit" style="width: 100px;" class="btn btn-danger" (click)="deleteInstitute()">Delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
